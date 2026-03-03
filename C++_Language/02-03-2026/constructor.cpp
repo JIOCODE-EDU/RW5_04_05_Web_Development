@@ -14,15 +14,39 @@ private:
   string comp_ceo;
 
 public:
-  DiamondCompany(int id, string name, int staff, double revenue, int import_raw, int export_dia, string ceo)
+  DiamondCompany()
   {
-    comp_id = id;
-    comp_name = name;
-    comp_staff_quantity = staff;
-    comp_revenue = revenue;
-    comp_import_raw_diamond = import_raw;
-    comp_export_diamond = export_dia;
-    comp_ceo = ceo;
+    comp_id = 0;
+    comp_name = " ";
+    comp_staff_quantity = 0;
+    comp_revenue = 0;
+    comp_import_raw_diamond = 0;
+    comp_export_diamond = 0;
+    comp_ceo = "";
+  }
+
+  void input(){
+     cout << "Company Id: ";
+    cin >> comp_id;
+
+    cout << "Company Name: ";
+    cin >> comp_name;
+
+    cout << "Company Staff Queantity : ";
+    cin >> comp_staff_quantity;
+
+    cout << "Company Revenue : ";
+    cin >> comp_revenue;
+
+    cout << "Company Import Raw Diamond : ";
+    cin >> comp_import_raw_diamond;
+
+    cout << "Company Export Diamond : ";
+    cin >> comp_export_diamond;
+
+    cout << "Company CEO Name : ";
+    cin >> comp_ceo;
+
   }
 
   void display(){
@@ -45,39 +69,11 @@ int main(){
   cout << "Enter number of Diamond Companies : ";
   cin >> n;
 
-  vector<DiamondCompany> companies;
+  DiamondCompany companies[100];
 
   for(int i = 0; i < n; i++){
-    int id , staff , import_raw , export_dia;
-    string name , ceo;
-    double revenue;
-
     cout << "\n Enter Details of Company" << endl;
-
-    cout << "Company Id: ";
-    cin >> id;
-
-    cout << "Company Name: ";
-    cin >> name;
-
-    cout << "Company Staff Queantity : ";
-    cin >> staff;
-
-    cout << "Company Revenue : ";
-    cin >> revenue;
-
-    cout << "Company Import Raw Diamond : ";
-    cin >> import_raw;
-
-    cout << "Company Export Diamond : ";
-    cin >> export_dia;
-
-    cout << "Company CEO Name : ";
-    cin >> ceo;
-
-    DiamondCompany obj(id , name  , staff , revenue , import_raw , export_dia , ceo);
-
-    companies.push_back(obj);
+    companies[i].input();
 
   }
 
