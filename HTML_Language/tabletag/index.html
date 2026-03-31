@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      table{
+        /*border-collapse: collapse;*/
+      }
+  </style>
+</head>
+<body>
+  <!-- Table Tag -->
+
+  <table border="1" cellpadding="10" cellspacing="20">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>Vivek</td>
+          <td>28</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Bhavy</td>
+          <td>50</td>
+          <td>Male</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <!-- Merged Table -->
+
+  <table border="1">
+      <tr>
+          <th>column 1</th>
+          <th>column 2</th>
+          <th>column 3</th>
+      </tr>
+      <tr>
+          <td rowspan="2">Row1 Cell1</td>
+          <td>Row1 Cell2</td>
+          <td>Row1 Cell3</td>
+      </tr>
+      <tr>
+        <td>Row2 Cell2</td>
+        <td>Row2 Cell3</td>
+      </tr>
+      <tr>
+        <td colspan="3">Row3 Cell1</td>
+      </tr>
+  </table>
+
+  <!-- Colgroup table -->
+
+  <table border="1">
+    <colgroup>
+        <col span="2" bgcolor="green">
+        <col span="1" bgcolor="red">
+    </colgroup>
+      <tr>
+          <th>column 1</th>
+          <th>column 2</th>
+          <th>column 3</th>
+      </tr>
+      <tr>
+          <td rowspan="2">Row1 Cell1</td>
+          <td>Row1 Cell2</td>
+          <td>Row1 Cell3</td>
+      </tr>
+      <tr>
+        <td>Row2 Cell2</td>
+        <td>Row2 Cell3</td>
+      </tr>
+      <tr>
+        <td colspan="3">Row3 Cell1</td>
+      </tr>
+  </table>
+
+  <!-- Caption  + Table --->
+
+ <table border="1">
+  <caption>This is Html Table Tag</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>Vivek</td>
+          <td>28</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Bhavy</td>
+          <td>50</td>
+          <td>Male</td>
+        </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
