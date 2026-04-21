@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Html Lecture</title>
+	<link rel="stylesheet" type="text/css" href="./asset/fonts/stylesheet.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+		integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		#para-1 {
+			color: blue;
+			background-color: black;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="./asset/css/style.css">
+</head>
+
+<body>
+	<!-- Css selectors -->
+	<!--
+	
+		1.tag selector : selects all elements of a specific type
+		2.class selector : selects all elements with a specific class attribute
+		3.id selector : selects a single element with a specific id attribute
+		4.attribute selector : selects elements based on the presence or value of an attribute
+		5.pseudo-class selector : selects elements based on their state or position
+		6.pseudo-element selector : selects elements based on their position in the document
+		7.universal selector : selects all elements in the document
+		8.grouping selector : selects multiple elements based on a common selector
+		9.combinators selector : selects elements based on their relationship to other elements
+		10.negation selector : selects elements that do not match a specific selector
+		11 link selector : selects elements based on their relationship to a link element, such as :link, :visited, :hover, and :active
+	 -->
+
+	<!--
+		1.cascade : the process by which styles are applied to elements based on their specificity and importance
+		2.specificity : the measure of how specific a selector is, which determines which styles are applied to an element when multiple selectors match it
+		3.inheritance : the process by which styles are passed down from parent elements to their children, allowing for consistent styling across a website
+		4.importance : the level of importance assigned to a style, which can be influenced by factors such as the use of !important or inline styles
+		5.source order : the order in which styles are defined in the stylesheet, which can affect how they are applied to elements when multiple selectors match them
+		6.media queries : a feature of CSS that allows for the application of different styles based on the characteristics of the device or screen size being used to view the website
+		7.css variables : a feature of CSS that allows for the definition of reusable values that can be used throughout a stylesheet, making it easier to maintain and update styles across a website
+		8.css specificity calculator : a tool that helps to calculate the specificity of a selector, which can be useful for understanding how styles are applied to elements and resolving conflicts between selectors
+		9.css reset : a set of styles that are applied to all elements in a website to ensure consistency across different browsers and devices, by removing default styles and providing a clean slate for styling
+		10.css normalization : a set of styles that are applied to all elements in a website to ensure consistency across different browsers and devices, by providing a consistent baseline of styles while still allowing for some default styling to be retained
+		11.css specificity hierarchy : the order in which styles are applied to elements based on their specificity, with inline styles having the highest specificity, followed by id selectors, class selectors, and finally tag selectors
+		12.css specificity conflicts : situations where multiple selectors match the same element and have the same specificity, in which case the source order of the styles will determine which one is applied
+		13.css specificity and inheritance : the way in which styles are inherited from parent elements can affect the specificity of selectors, as inherited styles may have a lower specificity than styles defined directly on an element
+		14.css specificity and media queries : the use of media queries can affect the specificity of selectors, as styles defined within a media query may have a higher specificity than styles defined outside of it, depending on the characteristics of the device or screen size being used to view the website
+		15.css specificity and !important : the use of !important can override the normal specificity hierarchy, allowing a style to be applied regardless of its specificity, but it should be used sparingly as it can make styles difficult to maintain and debug
+		16.css specificity and css variables : the use of css variables can affect the specificity of selectors, as styles defined using variables may have a lower specificity than styles defined directly on an element, depending on how the variables are used and defined in the stylesheet
+		17.css specificity and css reset/normalization : the use of css reset or normalization can affect the specificity of selectors, as styles defined in these resets may have a lower specificity than styles defined directly on an element, depending on how the resets are implemented and used in the stylesheet
+		18.css specificity and grouping selectors : the use of grouping selectors can affect the specificity of selectors, as styles defined in a grouping selector may have a lower specificity than styles defined directly on an element, depending on how the grouping selector is structured and used in the stylesheet
+		19.css specificity and combinators : the use of combinators can affect the specificity of selectors, as styles defined using combinators may have a lower specificity than styles defined directly on an element, depending on how the combinators are structured and used in the stylesheet
+		20.css specificity and negation selectors : the use of negation selectors can affect the specificity of selectors, as styles defined using negation selectors may have a lower specificity than styles defined directly on an element, depending on how the negation selectors are structured and used in the stylesheet
+		21.css specificity and pseudo-classes/elements : the use of pseudo-classes and pseudo-elements can affect the specificity of selectors, as styles defined using these selectors may have a lower specificity than styles defined directly on an element, depending on how the pseudo-classes/elements are structured and used in the stylesheet
+		22.css specificity and attribute selectors : the use of attribute selectors can affect the specificity of selectors, as styles defined using attribute selectors may have a lower specificity than styles defined directly on an element, depending on how the attribute selectors are structured and used in the stylesheet
+		23.css specificity and id/class/tag selectors : the use of id, class, and tag selectors can affect the specificity of selectors, as styles defined using these selectors may have a higher specificity than styles defined using other types of selectors, depending on how they are structured and used in the stylesheet
+		24.css specificity and inline styles : the use of inline styles can affect the specificity of selectors, as styles defined using inline styles have the highest specificity and will override styles defined using other types of selectors, regardless of their specificity or source order
+		25.css specificity and !important : the use of !important can affect the specificity of selectors, as styles defined using !important will override styles defined using other types of selectors, regardless of their specificity or source order, but it should be used sparingly as it can make styles difficult to maintain and debug
+		26.css specificity and media queries : the use of media queries can affect the specificity of selectors, as styles defined within a media query may have a higher specificity than styles defined outside of it, depending on the characteristics of the device or screen size being used to view the website, but it should be used carefully to ensure that styles are applied consistently across different devices and screen sizes
+		27.css specificity and css variables : the use of css variables can affect the specificity of selectors, as styles defined using variables may have a lower specificity than styles defined directly on an element, depending on how the variables are used and defined in the stylesheet, but it can also make styles easier to maintain and update across a website
+		28.css specificity and grouping selectors : the use of grouping selectors can affect the specificity of selectors, as styles defined in a grouping selector may have a lower specificity than styles defined directly on an element, depending on how the grouping selector is structured and used in the stylesheet, but it can also make styles more efficient and easier to read by reducing redundancy in the stylesheet
+		29.css specificity and combinators : the use of combinators can affect the specificity of selectors, as styles defined using combinators may have a lower specificity than styles defined directly on an element, depending on how the combinators are structured and used in the stylesheet, but it can also allow for more precise targeting of elements based on their relationship to other elements in the document
+		30.css specificity and negation selectors : the use of negation selectors can affect the specificity of selectors, as styles defined using negation selectors may have a lower specificity than styles defined directly on an element, depending on how the negation selectors are structured and used in the stylesheet, but it can also allow for more efficient targeting of elements by excluding certain elements from being selected
+	 
+	-->
+
+	<!-- Combinators Selector -->
+	<!--
+		child selector (>) : selects direct children of an element
+		descendant selector (space) : selects all descendants of an element
+		sibling selector (+) : selects the next sibling of an element
+		general sibling selector (~) : selects all siblings of an element that follow it
+	 -->
+	<!-- <div class="container">
+		<div class="box1">
+			<div class="box-1">div-1</div>
+			<div class="box-2">div-2</div>
+			<div class="box-3">div-3</div>
+			<div>
+				<div class="box-1">div-4</div>
+				<div class="box-2">div-5</div>
+				<div class="box-3">div-6</div>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- <div class="container">
+		<div class="box2">
+			<div class="box-1"></div>
+			<div class="box-2"></div>
+			<div class="box-3"></div>
+		</div>
+	</div> -->
+
+	<!-- <p id="para-1" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, magnam odio autem sed voluptates labore assumenda, voluptate aliquid exercitationem nemo aspernatur iste pariatur architecto eaque repellendus? Non, reprehenderit vero! Earum.</p>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta neque repellat quasi architecto nisi itaque officia cumque et similique impedit ad, minus odit nulla vero tempora, animi ipsam eius eum.</p>
+	<h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium eligendi veniam sequi fugiat. Fugit veritatis iusto in unde nesciunt tenetur illo illum provident! Nihil quaerat aliquid assumenda, numquam quam magnam?</h1>
+	<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, dicta est adipisci, eos praesentium quos, qui omnis ex perferendis aperiam vero eveniet totam quibusdam! Quam laborum nam error perspiciatis quisquam.</p>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus deserunt, maxime quo veritatis, sint possimus fugit nostrum est hic nesciunt optio nulla sequi dignissimos sed pariatur eaque! Necessitatibus, et vel.</p>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, nostrum! Quae assumenda debitis voluptatibus eos repudiandae id aliquid optio illo rerum unde, voluptas cum. Excepturi architecto officiis totam dolorum nisi.</p>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure doloribus officiis minus nemo recusandae omnis, voluptates libero reprehenderit distinctio repudiandae odio blanditiis dolore, minima error obcaecati, deserunt quaerat amet eaque.</p>
+	<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil vel ab alias odio dicta reiciendis, saepe facere dolorum excepturi voluptas vitae eos minus quidem iusto obcaecati rerum quas provident!</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ullam quia voluptatem nostrum magni quaerat, officia, id suscipit, perspiciatis sit similique beatae iure minus hic delectus fugiat explicabo eum tempore!</p> -->
+
+
+	<!--Css Pseudo Class-->
+
+	<header>
+		<p>this is p tag 1</p>
+		<p>this is p tag 2</p>
+		<h1>this is element 1</h1>
+		<h1>this is element 2</h1>
+		<h1>this is element 3</h1>
+		<h1>this is element 4</h1>
+		<h1>this is element 5</h1>
+		<section>
+			<div class="box-1">
+				<p>this is element 3</p>
+				<h1>this is element 7</h1>
+				<h1>this is element 8</h1>
+				<h1>this is element 9</h1>
+				<h1>this is element 10</h1>
+				<p>this is p tag</p>
+				<h1>this is element 11</h1>
+				<p>this is p tag</p>
+			</div>
+			<div>
+				<h1>this is element 12</h1>
+				<p>this is p tag 4</p>
+				<h1>this is element 13</h1>
+				<h1>this is element 14</h1>
+				<h1>this is element 15</h1>
+				<h1>this is element 16</h1>
+				<p>this is p tag 5</p>
+			</div>
+		</section>
+		<div class="box-2">
+			<h1>this is element 17</h1>
+			<h1>this is element 18</h1>
+			<h1>this is element 19</h1>
+			<h1>this is element 20</h1>
+			<h1>this is element 21</h1>
+			<h1>this is element 22</h1>
+			<h1>this is element 23</h1>
+		</div>
+		<h1>this is element 24</h1>
+		<h1>this is element 25</h1>
+		<h1>this is element 26</h1>
+		<section>
+			<h1>this is element 27</h1>
+			<p>this is p tag</p>
+			<h1>this is element 28</h1>
+			<h1>this is element 29 </h1>
+			<h1>this is element 30</h1>
+			<h1>this is element 31</h1>
+			<h1>this is element 32</h1>
+		</section>
+		<span>
+			<p>this is p tag</p>
+			<h1>this is element 33</h1>
+			<h1>this is element 34</h1>
+			<h1>this is element 35</h1>
+			<div class="box-3">
+				<p>this is p tag 5</p>
+				<h1>this is element 36</h1>
+				<h1>this is element 37</h1>
+				<h1>this is element 38</h1>
+				<h1>this is element 39</h1>
+				<h1>this is element 40</h1>
+				<h1>this is element 41</h1>
+			</div>
+		</span>
+		<h1>this is element 42</h1>
+		<h1>this is element 43</h1>
+		<h1>this is element 44</h1>
+	</header>
+
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+/* universal selector */
+
+/* *{
+	color:red;
+} */
+
+
+/* combinator selector */
+
+/* .container .box1 > .box-1{
+	background-color: red;
+	height: 200px;
+	width: 200px;
+	border:1px solid black;
+} */
+
+/* h1 + p{
+	color: red;	
+	background-color: black;
+} */
+
+/* h1 ~ p{
+	color: red;	
+	background-color: black;
+}
+
+#para-1{
+	color:purple;
+	background-color: black;
+} */
+
+/* cscading and specificity */
+
+/* #para-1{
+	color:purple;
+	background-color: black;
+}
+
+.para{
+	color: red ;
+	background-color: black;
+} */
+
+/* p{
+	color:green
+} */
+
+/* inheritance */
+
+/* .box-1{
+	color: red;
+	height: 100px;
+	width: 100px;
+	background:linear-gradient(to left , green ,blue ,  orange);
+	border:1px solid black;
+	border-radius: 100%;
+}
+
+.box2 .box-1{
+	background:linear-gradient(to top , green ,blue ,  orange);
+}
+
+.container .box2 .box-1{
+	background:linear-gradient(to right , green ,blue ,  orange);
+} */
+
+/* Pseudo class */
+
+/* h1:first-child{
+	color: red;
+} */
+
+/* h1:last-child{
+	color: green;
+} */
+
+/* h1:first-of-type{
+	color: red;
+} */
+
+/* h1:last-of-type
+{
+	color: green;
+} */
+
+/* h1:nth-child(2){
+	color: red;
+} */
+
+/* h1:nth-child(5){
+	color: green;
+} */
+
+/* h1:nth-of-type(7){
+	color: red;
+} */
+
+/* h1:nth-last-of-type(3){
+	color: green;
+} */
+
+/* h1:only-child{
+	color: red;
+}
+p:only-of-type{
+	color: green;
+} */
