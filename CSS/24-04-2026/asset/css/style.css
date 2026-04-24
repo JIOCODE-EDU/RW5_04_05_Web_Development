@@ -1,0 +1,108 @@
+/* position static */
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.menu{
+	height: 100px;
+	width: 100%;
+	background-color: palevioletred;
+	border:2px solid black;
+	/* position: static; */
+	/* position: fixed; */
+	/* position: sticky; */
+	top:0;
+}
+
+.maindiv{
+	background-color: gray;
+	border:2px solid black;
+	height: 800px;
+	width: 100%;
+	position: relative;
+}
+
+div{
+	height: 100px;
+	width: 100px;
+	border:1px solid black;
+	font-size: 25px;
+	color:white;
+}
+
+.box-1{
+	right:0;
+	background-color: green;
+}
+
+.box-2{
+	right:0;
+	bottom: 0;
+	background-color: green;
+}
+
+.box-3{
+	right:0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	background-color: green;
+}
+
+.box-4{
+	right: 0;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	margin: auto;
+	background-color: green;
+}
+
+.box-5{
+	right: 0;
+	top: 0;
+	left: 0;
+	margin: auto;
+	background-color: green;
+}
+
+.box-6{
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	background-color: green;
+}
+
+.box-7{
+	left: 0;
+	background-color: green;
+}
+
+.box-7 div{
+	height: 20px;
+	width: 20px;
+	background-color: red;
+}
+
+.box-8{
+	left: 0;
+	top:0;
+	bottom: 0;
+	margin: auto;
+	background-color: green;
+}
+
+.box-9{
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	background-color: green;
+}
+
+div[class*="box-"]{
+	position: absolute;
+}
