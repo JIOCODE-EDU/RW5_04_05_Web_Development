@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #f5f5f5;
+	margin: 0;
+	padding: 0;
+}
+
+.transform-2d {
+	width: 100px;
+	height: 100px;
+	background-color: #3498db;
+	margin: 50px;
+	/* transform: translate(400px , 400px); */
+	/* transform: translateX(1000px); */
+	/* transform: translateY(400px);
+	transform: rotate(90deg);
+	transition: rotateX(90deg);
+	transition: rotateY(90deg);
+	transform: scale(1);
+	transform: scale(2);
+	transform: scale(0.5);
+	transform: skew(90deg , 90deg);
+	transform: skewX(45deg);
+	transform: skewY(45deg); */
+	/* transition-delay:5s; */
+	/* transition-duration:2s;
+	transition-property: transform;
+	transition-timing-function:linear;
+	transition-timing-function: ease; */
+}
+
+.parent{
+	border:2px solid black;
+}
+
+.parent:hover .transform-2d{
+	transform: translateX(1400px);
+	transition-duration:2s;
+	transition-property: transform;
+	transition-timing-function:linear;
+	/* transition-timing-function: ease;
+	transition-timing-function: ease-in;
+	transition-timing-function: ease-out;
+	transition-timing-function: ease-in-out; */
+	transition-timing-function: steps(2);
+}
+
+/* 3D Transformations */
+
+/* https://polypane.app/css-3d-transform-examples/ */
+
