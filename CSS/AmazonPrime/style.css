@@ -134,3 +134,92 @@
           justify-content: space-between;  
           padding: 20px;
         }
+
+/* slider section */
+
+.slider{
+  width: 1900px;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+  margin: 50px auto;
+}
+
+.slides{
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.slide{
+  width: 100%;
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+input{
+  display: none;
+}
+
+#slide1:checked ~ .slides{
+  margin-left: 0;
+}
+
+#slide2:checked ~ .slides{
+  margin-left: -100%;
+}
+
+#slide3:checked ~ .slides{
+  margin-left: -200%;
+}
+
+.navigation{
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation label{
+  width: 15px;
+  height: 15px;
+  border:2px solid white;
+  margin: 0px 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.navigation label:hover{
+  background-color: white;
+}
+
+/* Continue watching section */
+
+.watch-grid{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.watch-card{
+  width: 400px;
+  height: 200px;
+}
+
+.watch-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+.watch-text{
+  color:white;
+  margin-block: 20px;
+}
