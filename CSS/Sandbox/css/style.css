@@ -32,6 +32,7 @@ ul{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
 }
 
 .nav-links{
@@ -44,6 +45,7 @@ ul{
   color:black;
   font-family: "Urbanist", sans-serif;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .nav-links li a span i{
@@ -64,6 +66,10 @@ ul{
 .banner-section{
   background-color: #f6f7f9;
   height: 100vh;
+}
+
+.card-section{
+  padding-inline: 20px;
 }
 
 .card{
@@ -137,3 +143,36 @@ ul{
   background-color: rgb(195, 195, 195);
   border-radius: 50%;
 }
+
+.mobile-menu span button{
+  background: none;
+  border:none;
+}
+
+.mobile-menu span button i {
+  font-size: 25px;
+
+}
+
+.mobile-menu{
+  display: block;
+}
+
+.nav-links{
+  display: none;
+}
+
+.card1{
+  order:2
+}
+
+.card2{
+  order:1
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+

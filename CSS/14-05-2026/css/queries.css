@@ -1,0 +1,38 @@
+@media screen and (min-width:576px) and (max-width:992px) {
+  .box{
+    background-color: red;
+  }
+}
+
+
+@media screen and (min-width:992px) , (orientation: landscape) {
+  .box{
+    background-color: green;
+  }
+}
+
+/* Mobile first approach */
+@media screen and (min-width:576px) {
+  .box{
+    background-color: red;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .box{
+    background-color: green;
+  }
+}
+
+/* Desktop first approach */
+@media screen and (max-width:992px) {
+  .box{
+    background-color: red;
+  }
+}
+
+@media screen and (max-width:576px) {
+  .box{
+    background-color: green;
+  }
+}
