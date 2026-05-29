@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+  background-color: antiquewhite;
+}
+
+.container {
+  max-width:1400px;
+  margin-block: 20px;
+  padding-inline: 50px;
+  margin-inline: auto;
+}
+
+.main_card {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  margin: auto;
+  align-items: center;
+  position: relative;
+}
+
+.card {
+  width: 100%;
+  height: 800px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow:inset 0 0 10px black;
+}
+
+.card_img {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+}
+
+.card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.category {
+  font-size: 16px;
+  background-color: white;
+  border-bottom-right-radius: 25px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  left: 0px;
+  padding: 22px 45px;
+  z-index: 5;
+  box-shadow: 5px 5px 10px black;
+}
+
+.category::before {
+  content: "";
+  position: absolute;
+  right: -30px;
+  top: -0px;
+  width: 30px;
+  height: 15px;
+  background-color: transparent;
+  border-top-left-radius: 35px;
+  z-index: 2;
+  box-shadow: -12px 0 0 white;
+}
+
+.category::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -15px;
+  width: 30px;
+  height: 15px;
+  background-color: transparent;
+  border-top-left-radius: 35px;
+  box-shadow: -12px 0 0 white;
+}
+
+
+.card_text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card_text button {
+  border-radius: 50px;
+  padding: 15px 50px;
+  background-color: rgb(227, 150, 8);
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.card p {
+  margin-top: 20px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+
+
+}
+
+.tags span {
+  border-radius: 50px;
+  padding: 10px 15px;
+  background-color: rgb(227, 150, 8);
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.tags~button {
+  background-color: rgb(227, 150, 8);
+  width: 100%;
+  margin-top: 30px;
+  padding-block: 15px;
+  border-radius: 50px;
+  border: none;
+}
+
+.card_btn {
+  font-size: 20px;
+  font-weight: bold;
+  color: white
+}
