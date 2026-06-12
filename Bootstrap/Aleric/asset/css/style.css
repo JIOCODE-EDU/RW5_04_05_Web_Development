@@ -1,0 +1,35 @@
+*{
+   font-family: "Kanit", sans-serif;
+}
+
+header{
+  background: url(../images/asset\ 82.webp);
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.img-fluid{
+  max-width: 150px;
+}
+
+.navbar-nav{
+  margin-left: 150px;
+  li a{
+    font-weight:500;
+    margin-left: 25px;
+  }
+}
+.search{
+  height: 40px;
+  width: 40px;
+  border:2px solid rgba(0, 0, 0, 0.324);
+}
+
+.search:hover{
+  background-color: black;
+  color:white;
+}
+
+.btn{
+  margin-left: 40px;
+}
