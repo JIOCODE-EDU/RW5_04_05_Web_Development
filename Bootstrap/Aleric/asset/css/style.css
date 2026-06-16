@@ -30,6 +30,26 @@ header{
   color:white;
 }
 
-.btn{
-  margin-left: 40px;
+.play:hover{
+  color: black;
+}
+
+.Our{
+  padding-block: 100px;
+}
+
+.virus{
+  animation-name: circle;
+  animation-duration:2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes circle{
+  0%{
+    transform: rotate(0deg);
+  }
+   100%{
+    transform: rotate(360deg);
+  }
 }
