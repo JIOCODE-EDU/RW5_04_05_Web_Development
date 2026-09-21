@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default container html mx-auto my-8">
+    <table class="w-full text-sm text-left rtl:text-right text-body">
+      <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
+        <tr>
+          <th scope="col" class="px-16 py-3">
+            <span class="sr-only">Image</span>
+          </th>
+          <th scope="col" class="px-6 py-3 font-medium">
+            Product
+          </th>
+          <th scope="col" class="px-6 py-3 font-medium">
+            Qty
+          </th>
+          <th scope="col" class="px-6 py-3 font-medium">
+            Price
+          </th>
+          <th scope="col" class="px-6 py-3 font-medium">
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody id="CartProductList">
+      </tbody>
+    </table>
+    <div>Total Price : </div>
+  </div>
+
+
+  <div id="footer"></div>
+
+  <script type="module">
+
+    import {renderCartProducts} from './src/js/cart.js'
+    fetch('./src/components/header.html').then(response => {
+      renderCartProducts()
+      return response.text()
+    }).then(data => {
+      document.getElementById('header').innerHTML = data
+    })
+    fetch('./src/components/footer.html').then(response => {
+      return response.text()
+    }).then(data => {
+      document.getElementById('footer').innerHTML = data
+    })
+  </script>
+  <script type="module" src="./src/js/cart.js"></script>
+</body>
+
+</html>
