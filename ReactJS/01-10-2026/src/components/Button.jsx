@@ -15,6 +15,5 @@ export const Button = () => {
       <button>Click Me</button>
       <button>Read Me</button>
     </span>
-
   )
 }
