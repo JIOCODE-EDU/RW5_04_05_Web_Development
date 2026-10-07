@@ -1,100 +1,33 @@
 import Card_Component from "./components/Card_Component";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Location from "./components/Location";
+import { useState } from "react";
+
+// ReactJS Props
+
+// Props are used to pass data from one component to another. They are read-only and cannot be modified by the child component. Props allow you to create reusable components that can accept different data inputs.
 
 function App() {
-  // spread operator with array
 
-  const fruits = ["Apple", "Banana", "Mango", "Orange"];
+  // let city = "Surat"
+  // let state = "Gujarat"
+  // let country = "India"
 
-  const newFruits = [...fruits, "Grapes"];
-
-  // spread operator with two arrays
-
-  const vegetables = ["Potato", "Tomato", "Onion", "Garlic"];
-
-  const foodItems = [...fruits, ...vegetables];
-
-  // spread operator with object
-
-  const student = {
-    name: "Vivek",
-    age: 25,
-    city: "Surat",
-  };
-
-  const updatedStudent = {
-    ...student,
-    course: "ReactJS",
-    age: 30,
-  };
-
-  // Rest Parameter in function
-
-  function calculateTotal(...numbers) {
-    let total = 0;
-
-    for (let num of numbers) {
-      total = total + num;
-    }
-
-    return total;
-  }
-
-  const total = calculateTotal(10, 20, 30, 40, 50);
-
-  // Rest Parameter with first Parameter
-
-  function showStudent(name, ...subjects) {
-    return (
-      <div>
-        <p>
-          <b>Student :</b>
-          {name}
-        </p>
-        <p>
-          <b>Subjects:</b>
-        </p>
-        <ul>
-          {subjects.map((subject, index) => (
-            <li key={index}>{subject}</li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-
-  let data = showStudent("Rahul", "Math", "Physics", "Chemistry");
-
-  // Reduce
-
-  const marks = [70, 80, 90, 60];
-
-  //  let total_marks = 0
-  //   for(let num of marks){
-  //     total_marks = total_marks + num
-  //   }
-
-  const totalMarks = marks.reduce((sum, mark) => sum + mark, 0);
-
+    const [city , setCity] = useState("Surat")
+  const [state , setState] = useState("Gujarat")
+  const [country , setCountry] = useState("India")
   
 
   return (
     <>
-      <ul>
-        {foodItems.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-      <div>
-        <div>Name:{updatedStudent.name}</div>
-        <div>Age:{updatedStudent.age}</div>
-        <div>City:{updatedStudent.city}</div>
-        <div>Course:{updatedStudent.course}</div>
-      </div>
-      <div>Total: {total}</div>
-      <div>{data}</div>
-      <div>Total_Marks : {totalMarks}</div>
+      <Location city={city} state={state} country={country}/>
+      {/* <Location item1={city} item2={state} item3={country}/> */}
+      {/* <Location/> */}
+
+      <button onClick={() => setCity("Ahmedabad")}>change city</button>
+      <button onClick={() => setState("Delhi")}>change state</button>
+      <button onClick={() => setCountry("Canada")}>change country</button>
     </>
   );
 }
