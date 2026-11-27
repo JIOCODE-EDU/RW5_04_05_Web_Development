@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/students/page.js", "components/StudentForm.tsx", "components/StudentTable.js", "components/UncontrolledForm.js", "components/Pagination.js", "lib/validate.ts"  ],
+, "app/students/route.tsx", "components/StudentForm.tsx", "components/StudentTable.tsx", "components/UncontrolledForm.tsx", "components/Pagination.tsx", "lib/validate.ts"  ],
   "exclude": ["node_modules"]
 }

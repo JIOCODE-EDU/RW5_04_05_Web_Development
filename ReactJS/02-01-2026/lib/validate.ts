@@ -1,11 +1,9 @@
-import { ValidationErrors } from "@/lib/types";
+import type { ValidationErrors } from "@/lib/types";
 
-export function validateStudent(data: unknown) {
+export function validateStudent(data: unknown): ValidationErrors {
   const errors: ValidationErrors = {};
-
-  // Name : at least 3 characters. only letter and spaces
   const student =
-    typeof data === "object" && data != null && !Array.isArray(data)
+    typeof data === "object" && data !== null && !Array.isArray(data)
       ? (data as Record<string, unknown>)
       : {};
   const name = typeof student.name === "string" ? student.name : "";
@@ -14,51 +12,45 @@ export function validateStudent(data: unknown) {
   const phone = typeof student.phone === "string" ? student.phone : "";
   const gender = typeof student.gender === "string" ? student.gender : "";
   const hobbies = Array.isArray(student.hobbies) ? student.hobbies : [];
-  const city = typeof student.city ? student.city : "";
+  const city = typeof student.city === "string" ? student.city : "";
 
   if (!name || name.trim().length < 3) {
-    errors.name = "Name must be at least 3 character.";
+    errors.name = "Name must be at least 3 characters.";
+  } else if (!/^[A-Za-z ]+$/.test(name.trim())) {
+    errors.name = "Name can contain only letters and spaces.";
   }
 
   if (!email) {
-    errors.email = "email is required.";
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
-    errors.email = "Enter a valid email (abc@example.com)";
+    errors.email = "Email is required.";
+  } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+    errors.email = "Enter a valid email (example: abc@gmail.com).";
   }
 
   if (!password) {
     errors.password = "Password is required.";
-  } else if (
-    !/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/.test(
-      password,
-    )
-  ) {
-    errors.password = `Has minimum 8 characters in length. Adjust it by modifying {8,}
-At least one uppercase English letter. You can remove this condition by removing (?=.*?[A-Z])
-At least one lowercase English letter.  You can remove this condition by removing (?=.*?[a-z])
-At least one digit. You can remove this condition by removing (?=.*?[0-9])
-At least one special character,  You can remove this condition by removing (?=.*?[#?!@$%^&*-])`;
+  } else if (password.length < 6) {
+    errors.password = "Password must be at least 6 characters.";
+  } else if (!/\d/.test(password)) {
+    errors.password = "Password must contain at least one number.";
   }
 
   if (!phone) {
     errors.phone = "Phone is required.";
-  } else if (!/^\+[1-9]\d{1,14}$/.test(phone)) {
-    errors.phone = "Phone must be 10 digit and start with 6-9";
+  } else if (!/^[6-9]\d{9}$/.test(phone)) {
+    errors.phone = "Phone must be 10 digits and start with 6-9.";
   }
 
-  if(!gender){
-    errors.gender = "Please select a gender."
+  if (!gender) {
+    errors.gender = "Please select a gender.";
   }
 
-  if(hobbies.length === 0 || !hobbies.every((hobby) => typeof hobby === "string")){
-    errors.hobbies = "Select at least one hobby."
+  if (hobbies.length === 0 || !hobbies.every((hobby) => typeof hobby === "string")) {
+    errors.hobbies = "Select at least one hobby.";
   }
 
-  if(!city){
-    errors.city = "Please select a city."
+  if (!city) {
+    errors.city = "Please select a city.";
   }
 
-  return errors
-
-
+  return errors;
 }
